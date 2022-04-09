@@ -42,7 +42,6 @@ function generateMarkdown(answers) {
     <br />
 
     Thank you for visiting ${answers.title}!
-    
     `
 }
 
