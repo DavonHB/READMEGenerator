@@ -1,5 +1,5 @@
 
-    #p
+    # p
 
     ### ![badge](https://img.shields.io/badge/license-None--green)<br />
 
@@ -26,10 +26,10 @@
     This application is covered by the None license. 
 
     ## Contributing 
-    p
+    pp
 
     ## Questions 
-    p
+    
     <br />
     Find me on GitHub: [p](https://github.com/p)
     <br />
@@ -37,5 +37,4 @@
     <br />
 
     Thank you for visiting p!
-    
     
