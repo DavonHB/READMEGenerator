@@ -1,44 +1,44 @@
 function generateMarkdown(answers) {
     return`
-    # ${answers.title}
+# ${answers.title}
 
-    ### ![badge](https://img.shields.io/badge/license-${answers.license}--green)
+### ![badge](https://img.shields.io/badge/license-${answers.license}--green)
 
-    ## Description 
-    ${answers.description}
+## Description 
+${answers.description}
     
-    ## Table of Contents 
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Questions](#questions)
+## Table of Contents 
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Questions](#questions)
 
-    ## Installation 
-    ${answers.installation}
+## Installation 
+${answers.installation}
 
-    ## Usage
-    ${answers.usage}
+## Usage
+${answers.usage}
 
-    ## License 
-    ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
+## License 
+![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
     
-    This application is covered by the ${answers.license} license. 
+This application is covered by the ${answers.license} license. 
 
-    ## Contributing 
-    ${answers.contributing}
+## Contributing 
+${answers.contributing}
 
-    ## Questions 
-    ${answers.questions}
+## Questions 
+${answers.questions}
     
-    Find me on GitHub: [${answers.username}](https://github.com/${answers.username})
+Find me on GitHub: [${answers.username}](https://github.com/${answers.username})
     
-    Email me with any questions: ${answers.email}
+Email me with any questions: ${answers.email}
     
 
-    Thank you for visiting ${answers.title}!
-    `
+Thank you for visiting ${answers.title}!
+`
 };
 
 module.exports = generateMarkdown;
