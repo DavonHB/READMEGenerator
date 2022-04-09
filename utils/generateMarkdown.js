@@ -1,7 +1,3 @@
-const fs = require('fs');
-const inquirer = require('inquirer');
-const index = require('../index.js');
-
 function generateMarkdown(answers) {
     return`
     # ${answers.title}
@@ -43,6 +39,6 @@ function generateMarkdown(answers) {
 
     Thank you for visiting ${answers.title}!
     `
-}
+};
 
 module.exports = generateMarkdown;

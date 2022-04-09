@@ -3,6 +3,7 @@ const fs = require('fs');
 const util = require('util');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+const writeFileAsync = util.promisify(fs.writeFile);
 
 const questions = [
         {
@@ -100,32 +101,20 @@ const questions = [
             message: 'Enter a valid email address'
         }
     ]
-// Function to write README file
-const writeToFile = fileContent => {
-    return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/README.md', fileContent, err => {
-            if (err) {
-                reject(err);
-                return;
-            } resolve ({
-                ok: true
-            });
-        });
-    });
-};
 
 // Function to initialize the app
-function init() {
-    inquirer.prompt(questions)
-    .then(function(answers) {
-        console.log(answers);
-        let fileContent = generateMarkdown(answers);
-        writeToFile(fileContent);
-    });
-}
+async function init() {
+    try {
+        // Ask user questions and generate responses
+        const answers = await questions();
+        const generateContent = generateMarkdown(answers);
+        // Write new README.md to dist directory
+        await writeFileAsync('./dist/README.md', generateContent);
+        console.log('Successfully wrote to README.md');
+    }   catch(err) {
+        console.log(err);
+    }
+  }
 
 // Function that calls init function 
 init();
-
-//exports
-module.exports = questions;
