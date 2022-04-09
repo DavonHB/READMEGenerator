@@ -3,7 +3,6 @@ const fs = require('fs');
 const util = require('util');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
-const writeFileAsync = util.promisify(fs.writeFile);
 
 const questions = [
         {
@@ -115,12 +114,12 @@ const writeToFile = fileContent => {
     });
 };
 
-// Asynchronous function 
-async function init() {
+// Function to initialize the app
+function init() {
     inquirer.prompt(questions)
-    .then(function(answer) {
-        console.log(answer);
-        let fileContent = generateMarkdown(answer);
+    .then(function(answers) {
+        console.log(answers);
+        let fileContent = generateMarkdown(answers);
         writeToFile(fileContent);
     });
 }

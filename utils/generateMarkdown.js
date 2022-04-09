@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const index = require('../index.js');
 
 function generateMarkdown(answers) {
-    return `
+    return`
     # ${answers.title}
 
     ### ![badge](https://img.shields.io/badge/license-${answers.license}--green)<br />
