@@ -100,9 +100,9 @@ const questions = [
         }
     ]
 // Function to write README file
-const writeFile = fileContent => {
+const writeToFile = fileContent => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./generateREADME.md', fileContent, err => {
+        fs.writeFile('./dist/README.md', fileContent, err => {
             if (err) {
                 reject(err);
                 return;
