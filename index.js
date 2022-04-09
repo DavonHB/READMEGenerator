@@ -5,7 +5,8 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const writeFileAsync = util.promisify(fs.writeFile);
 
-const questions = [
+function questions(){
+    return inquirer.prompt([
         {
             type:'input',
             name: 'title',
@@ -100,7 +101,9 @@ const questions = [
             name: 'email',
             message: 'Enter a valid email address'
         }
-    ]
+    ]);
+}
+    
 
 // Function to initialize the app
 async function init() {
