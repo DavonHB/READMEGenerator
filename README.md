@@ -27,6 +27,9 @@ This application is covered by the None license.
 ## Contributing 
 DavonHB
 
+## Tests
+None
+
 ## Questions 
 You can contact me (DavonHB) at davonb113@gmail.com
     

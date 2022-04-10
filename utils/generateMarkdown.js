@@ -29,6 +29,10 @@ This application is covered by the ${answers.license} license.
 ## Contributing 
 ${answers.contributing}
 
+## Tests
+${answers.tests}
+
+
 ## Questions 
 ${answers.questions}
     

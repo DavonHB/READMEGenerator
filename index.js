@@ -75,6 +75,12 @@ const questions = [
         },
 
         {
+            type: "input",
+            name: "tests",
+            message: "Is there a test included?"
+        },
+
+        {
             type: 'input',
             name: 'questions',
             message: 'What do I do if I have an issue?'
